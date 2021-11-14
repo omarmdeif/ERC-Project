@@ -1,0 +1,59 @@
+#f1{
+  width: 100%;
+  overflow: hidden;
+  
+}
+#container{
+    width: 100%;
+    overflow: hidden;
+}
+
+#left {
+    float: left;
+    width: 49%;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+
+#right{
+    float: right;
+    width: 49%;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+
+#formHeader{
+    text-align: center;
+    color:red;
+}
+form {
+    padding: 5%;
+    color : gray;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;    
+}
+
+/* Style the submit button */
+button {
+  width: 100%;
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add a background color to the submit button on mouse-over */
+button:hover {
+  background-color:black;
+}

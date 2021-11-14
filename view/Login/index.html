@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>login Or Register</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+    <div>
+        <img src="2.png" alt="ERC" id="f1">
+    </div>
+    <br>
+
+    <div id="container">
+        <div id="right">
+            <h1 id="formHeader"> Login form </h1>
+            <hr>
+            <!--
+                *   method can be "get" or "post" we used "post" to hide paramters from url 
+                *   onsubmit takes value of true or false:
+                *          True: send request to server
+                *          False: doesn't send request to server
+                *          So we used it to validate inputs :
+                *               if inputs are valid our js function will return true
+                *               if inputs are invalid our js function will return false
+                *  action tells the webpage where the instruction(logic) to do are (in our case we use PHP to perform logic instructions)
+                -->
+            <form method="post" action="php/login.php" onsubmit="return validate_form ( );">
+                <label>Username</label>
+                <!-- 
+                    * name specify the name of the input data in the POST array
+                    * id to access or edit the element using CSS or JS
+                    -->
+                <input type="text" name="username" id="username">
+                <label>Password</label>
+                <!-- 
+                    * name specify the name of the input data in the POST array
+                    * id to access or edit the element using CSS or JS
+                    -->
+                <input type="password" name="password" id="password">
+                <!-- 
+                    * type can be submit or reset:
+                    *       submit: sends requests
+                    *       reset: empty inputs
+                    * name specify the name of the input data in the POST array (as we may have multiple forms at the same page , we identify each one of them by giving it a unique name & Value)
+                    -->
+                <button type="submit" name="login" value="Login"> Login </button>
+            </form>
+        </div>
+        <div id="left">
+            <h1 id="formHeader"> Register form </h1>
+            <hr>
+            <!--
+                *   method can be "get" or "post" we used "post" to hide paramters from url 
+                *   onsubmit takes value of true or false:
+                *          True: send request to server
+                *          False: doesn't send request to server
+                *          So we used it to validate inputs :
+                *               if inputs are valid our js function will return true
+                *               if inputs are invalid our js function will return false
+                *  action tells the webpage where the instruction(logic) to do are (in our case we use PHP to perform logic instructions)
+                -->
+            <form method="post" action="PHP/register.php" onsubmit="return validate_form ();">
+                <label>Username</label>
+                <!-- 
+                    * name specify the name of the input data in the POST array
+                    * id to access or edit the element using CSS or JS
+                    * required prevent user from submitting if the input are null
+                    * For more HTML5 Validation :
+                    *      https://www.the-art-of-web.com/html/html5-form-validation/
+                    *      https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
+                    -->
+                <input type="text" name="registerUsername" id="registerUsername" required>
+                <label>Password</label>
+                <input type="password" name="registerPassword" id="registerPassword" required>
+                <label>Confirm Password</label>
+                <input type="password" name="registerConfirmPassword" id="registerConfrimPassword" required>
+                <label>E-Mail</label>
+                <input type="email" name="registerEMail" id="registerEMail" required>
+                <label>Birthdate</label>
+                <input type="date" name="Birthdate" id="Birthdate" required>
+                <label>Mobile Number</label>
+                <input type="number" name="Mobile Number" id="Mobile Number" required>
+
+                <!-- 
+                    * type can be submit or reset:
+                    *       submit: sends requests
+                    *       reset: empty inputs
+                    * name specify the name of the input data in the POST array (as we may have multiple forms at the same page , we identify each one of them by giving it a unique name & Value)
+                    -->
+                <button type="submit" name="register" value="Register"> Register </button>
+            </form>
+        </div>
+    </div>
+    <script src="validtor.js"></script>
+</body>
+
+</html>
