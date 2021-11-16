@@ -1,0 +1,60 @@
+body{
+  background-image:url("2.png");
+
+}
+
+#container{
+    opacity: 0.8;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#left {
+    float: left;
+    width: 49%;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+.wrapper{
+  width: 650px;
+  margin: 400px auto;
+}
+
+#right{
+    float: right;
+    width: 49%;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+
+#formHeader{
+    text-align: center;
+    color: red;
+}
+form {
+    padding: 5%;
+    color : gray;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;    
+}
+
+
+button {
+  width: 100%;
+  background-color: red;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
