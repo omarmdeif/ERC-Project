@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Donation </title>
+    <link rel="stylesheet" type="text/css" href="don.css">
+</head>
+
+<body>
+
+    <body>
+
+        <img src="d.jpeg" id="d1">
+        <br>
+
+        <div id="right">
+            <h1 id="formHeader"> Donation </h1>
+            <hr>
+
+            <form method="post" action="php/login.php">
+                <label>Donation Type</label>
+                <br>
+                <label for="myCheck">Money:</label>
+                <input type="checkbox" id="MoneyCheck" onclick="myFunction()">
+                <label for="myCheck">Money:</label>
+                <input type="checkbox" id="MoneyCheck" onclick="myFunction()">  
+                <div id="text" style="display:none">
+                    <labal>Money amount </labal>
+                    <input type="number" name="number">
+
+                </div>
+
+
+                <script>
+                    function myFunction() {
+                        var checkBox = document.getElementById("MoneyCheck");
+                        var text = document.getElementById("text");
+                        if (checkBox.checked == true) {
+                            text.style.display = "block";
+                        } else {
+                            text.style.display = "none";
+                        }
+                    }
+                </script>
+                <label>Password</label>
+                <!-- 
+                    * name specify the name of the input data in the POST array
+                    * id to access or edit the element using CSS or JS
+                    -->
+                <input type="password" name="password" id="password">
+                <!-- 
+                    * type can be submit or reset:
+                    *       submit: sends requests
+                    *       reset: empty inputs
+                    * name specify the name of the input data in the POST array (as we may have multiple forms at the same page , we identify each one of them by giving it a unique name & Value)
+                    -->
+                <button type="submit" name="login" value="Login"> Login </button>
+            </form>
+        </div>
+
+
+
+    </body>
+
+</html>
