@@ -1,8 +1,9 @@
 <?php
+include_once 'Database.php';
 interface command{
     public function execute(): void;
 }
-class simpleCommand implements command{
+class requestBlood implements command{
     private $fVar;
     public function __construct(strnig $f){
         $this->fVar = $f;
@@ -11,7 +12,16 @@ class simpleCommand implements command{
         echo "this is the simple command's implenetation of the command design pattern";
     }
 }
-class complexCommand implements command{
+class requestCash implements command{
+    private $fVar;
+    public function __construct(strnig $f){
+        $this->fVar = $f;
+    }
+    public function execute(): void{
+        echo "this is the simple command's implenetation of the command design pattern";
+    }
+}
+class returnRequested implements command{
     private $receiver;
     private $aVar;
     private $bVar;
@@ -29,6 +39,12 @@ class complexCommand implements command{
 }
 /* the following class is where you implement the bussiness logic from this commands' side*/
 class receiver{
+    private $db;
+
+    public function __construct() {
+        echo 'created';
+        $this->db = new Database();
+        $this->link = $this->db->connectToDB();
     public function doSomething(string $a){
         echo "receiver is working and is receiving var(" . $a . ".)\n";
     }
@@ -38,6 +54,12 @@ class receiver{
 }
 /* */
 class invoker{
+    private $db;
+
+    public function __construct() {
+        echo 'created';
+        $this->db = new Database();
+        $this->link = $this->db->connectToDB();
     /** the following onstart and onfinish are command class variables 
      * to set what command is currently running on start and on finish */
     private $onStart;
