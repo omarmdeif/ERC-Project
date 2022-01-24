@@ -47,12 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         {
                     //food
             $TypeOfAid = 2;
+            $ReqType = 1;
         }
         else
         { 
             //money
   
             $TypeOfAid = 1;
+            $ReqType = 0;
         }
 
     $input_desc = trim($_POST["desc"]);
@@ -64,11 +66,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-        include_once 'CreateMoneyAidClass.php';
+        include_once 'CreateAidClass.php';
         $creator = new CreateClass();
         if ($TypeOfAid == 1)
         {
-            $creator->insertMoneyRecord($name, $phoneno, $income,$address,$desc);
+            $creator->insertMoneyRecord($name, $phoneno, $income,$address,$desc,$ReqType);
        
                     if ($creator->AddValuesToDatebase()) 
                             {
@@ -80,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($TypeOfAid == 2)
         {
            
-            $creator->insertFoodRecord($name, $phoneno, $Fn,$address,$desc);
+            $creator->insertFoodRecord($name, $phoneno, $Fn,$address,$desc,$ReqType);
 
         } else {
             echo "Something went wrong. lease try again later.";
