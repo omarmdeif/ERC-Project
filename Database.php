@@ -1,20 +1,14 @@
-<?php
-class Database {
-
-    private $server = "localhost";
-    private $username = "root";
-    private $password = "";
-    private $dbname = "oop";
-
-    public function connectToDB() {
-        $link = mysqli_connect($this->server, $this->username, $this->password, $this->dbname);
-        if ($link)
-            return $link;
-        else {
-            die("ERROR: Could not connect. " . mysqli_connect_error());
-
-            return false;
-        }
-    }
-
+<?php  
+// Database configuration  
+$dbHost     = "localhost";  
+$dbUsername = "root";  
+$dbPassword = "";  
+$dbName     = "demo";  
+  
+// Create database connection  
+$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);  
+  
+// Check connection  
+if ($db->connect_error) {  
+    die("Connection failed: " . $db->connect_error);  
 }
