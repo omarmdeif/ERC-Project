@@ -2,6 +2,7 @@
 include_once 'Database.php';
 interface command{
     public function execute(): void;
+    public function undo(): void;
 }
 class requestBlood implements command{
     private $fVar;
@@ -9,7 +10,10 @@ class requestBlood implements command{
         $this->fVar = $f;
     }
     public function execute(): void{
-        echo "this is the simple command's implenetation of the command design pattern";
+        echo "requesting blood";
+    }
+    public function undo(): void{
+        echo"returning blood";
     }
 }
 class requestCash implements command{
@@ -18,7 +22,10 @@ class requestCash implements command{
         $this->fVar = $f;
     }
     public function execute(): void{
-        echo "this is the simple command's implenetation of the command design pattern";
+        echo "requesting cash";
+    }
+    public function undo(): void{
+        echo"returning cash";
     }
 }
 class returnRequested implements command{
@@ -33,22 +40,22 @@ class returnRequested implements command{
     /* here is where you implement all receiver functions*/
     public function excute(): void{
         echo "this is the complex command's implementation of the command design pattern";
-        $this->receiver->doSomething($this->aVar);
-        $this->receiver->doSomething($this->bVar);
+        $this->receiver->request($this->aVar);
+        $this->receiver->donRequest($this->bVar);
     }
 }
 /* the following class is where you implement the bussiness logic from this commands' side*/
-class receiver{
+class missionActions{
     private $db;
 
     public function __construct() {
         echo 'created';
         $this->db = new Database();
         $this->link = $this->db->connectToDB();
-    public function doSomething(string $a){
+    public function request(string $a){
         echo "receiver is working and is receiving var(" . $a . ".)\n";
     }
-    public function doSomethingElse(string $b){
+    public function donRequest(string $b){
         echo "receiver is working and is receiving something else var(" . $b . ".)\n";
     }
 }
