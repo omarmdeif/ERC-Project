@@ -11,8 +11,6 @@
  *
  * @author Mohamed Alaa
  */
-include_once 'Realimag';
-include_once 'img,php';
 class Proxyimg implements img{
     
     //put your code here
