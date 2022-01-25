@@ -16,7 +16,7 @@ class Database {
     private $server = "localhost";
     private $username = "root";
     private $password = "";
-    private $dbname = "demo";
+    private $dbname = "oop";
 
     public function connectToDB() {
         $link = mysqli_connect($this->server, $this->username, $this->password, $this->dbname);
