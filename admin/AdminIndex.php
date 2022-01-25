@@ -38,32 +38,12 @@
           </a>
         </li>
         <li>
-          <a href="../add message/index.php">
-            <i class='bx bx-message' ></i>
-            <span class="links_name">Add Message</span>
+          <a href="../FactoryDp/Home.php">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Request List</span>
           </a>
         </li>
         <li>
-<<<<<<< HEAD
-          <a href="../sendmessage/index.php">
-            <i class='bx bx-message' ></i>
-            <span class="links_name">Send Message</span>
-          </a>
-        </li>
-        <li>
-          <a href="../Phase1/Login/register.html">
-            <i class='bx bx-user' ></i>
-            <span class="links_name">Register Admins</span>
-          </a>
-        </li>
-        <li>
-          <a href="../imgproxy/index.php">
-            <i class='bx bx-image' ></i>
-            <span class="links_name">Retreive Image</span>
-          </a>
-        </li>
-        <li>
-=======
           <a href="../add message/index.php">
             <i class='bx bx-message' ></i>
             <span class="links_name">Add Message</span>
@@ -88,7 +68,6 @@
           </a>
         </li>
         <li>
->>>>>>> 31c8958aa2ae21addc5ab36ffd71958c8741dfc6
           <a href="../don/index.php">
             <i class='bx bx-heart' ></i>
             <span class="links_name">Donate</span>
