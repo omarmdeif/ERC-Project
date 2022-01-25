@@ -11,34 +11,28 @@
  *
  * @author Mohamed Alaa
  */
-include_once 'img.php';
 class Realimag implements img {
     //put your code here
-    public $result;
+    public $result, $result2;
     function __construct() {
         $this->loaadfromdatabase();
         ;
     }
     function loaadfromdatabase ()
     {
-        require_once 'Database.php';
-        echo 'loded from database';
-        $this->result = $db->query("SELECT image FROM images where id = 1 ORDER BY id DESC"); 
         
+        echo 'loded from database';
+             echo '<br>';
 
     }
     public function show() {
+        echo 'My photo';
+             echo '<br>';
+
         
-        if($this->result->num_rows > 0){ ?> 
-    <div class="gallery"> 
-        <?php while($row = $this->result->fetch_assoc()){ ?> 
-            echo 'in show';
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> 
-        <?php } ?> 
-    </div> 
-<?php }else{ ?> 
-    <p class="status error">Image(s) not found...</p> 
-<?php }
-    }
+  
+
+        }
+        
 
 }
