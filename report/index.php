@@ -50,16 +50,17 @@
 
 
                   $sql2=  $row['SQL'];
-                  echo($sql2);
+                //   echo($sql2);
 
           }
           
       } else {
           echo("no data found");
       }
-      $sql3; $sql3+=$sql2;
+    //   $sql3 = " "; $sql3+=$sql2;
+    $sql3 = "SELECT * FROM bloodstock WHERE id>1";
        $res=mysqli_query($link, $sql3);
-       echo($res);
+    //      
       if(mysqli_num_rows($res)>0)
       {
           $i=1; 

@@ -35,14 +35,29 @@ include_once '../Controller/readController.php';
                                 <p class="form-control-static"><?php echo $row["name"]; ?></p>
                             </div>
                             <div class="form-group">
-                                <label>password</label>
-                                <p class="form-control-static"><?php echo $row["pwd"]; ?></p>
+                                <label>Email</label>
+                                <p class="form-control-static"><?php echo $row["email"]; ?></p>
                             </div>
                             <div class="form-group">
-                                <label>access level</label>
-                                <p class="form-control-static"><?php echo $row["accesslevel"]; ?></p>
+                                <label>Phone Number</label>
+                                <p class="form-control-static"><?php echo $row["phonenumber"]; ?></p>
                             </div>
-                         
+                            <div class="form-group">
+                                <label>Hours</label>
+                                <p class="form-control-static"><?php echo $row["hours"]; ?></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <p class="form-control-static"><?php echo $row["address"]; ?></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Compensation</label>
+                                <p class="form-control-static"><?php echo $row["compensation"]; ?></p>
+                            </div>
+                            <div class="form-group">
+                                <label>missionid</label>
+                                <p class="form-control-static"><?php echo $row["missionid"]; ?></p>
+                            </div>
                             <p><a href="../index.php" class="btn btn-primary">Back</a></p>
                         </form>
                     </div>

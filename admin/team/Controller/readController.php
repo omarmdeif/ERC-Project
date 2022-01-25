@@ -6,9 +6,12 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
     $reader = new ReadClass();
     if ($row = $reader->readOneRecord($id)) {
         $name = $row["name"];
-        $email = $row["pwd"];
-        $phonenumber = $row["accesslevel"];
-    
+        $email = $row["email"];
+        $phonenumber = $row["phonenumber"];
+        $hours = $row["hours"];
+        $address = $row["address"];
+        $compensation = $row["compensation"];
+        $missionid = $row["missionid"];
     } else {
         echo "Something went wrong. Please try again later.";
     }

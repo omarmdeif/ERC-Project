@@ -1,22 +1,10 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Database
- *
- * @author moamenibrahem
- */
 class Database {
 
     private $server = "localhost";
     private $username = "root";
     private $password = "";
-    private $dbname = "demo";
+    private $dbname = "oop";
 
     public function connectToDB() {
         $link = mysqli_connect($this->server, $this->username, $this->password, $this->dbname);

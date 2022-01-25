@@ -15,10 +15,13 @@ and open the template in the editor.
         include_once 'Database.php';
          $db = new Database();
         $link = $db->connectToDB();
-    $sql  = "SELECT messages.messagetemp FROM messageuser LEFT JOIN messages ON messageuser.messageid = messages.id WHERE messageuser.userid =1";  
+        $id = 1;
+    $sql  = "SELECT messages.messagetemp FROM messageuser LEFT JOIN messages ON messageuser.messageid = messages.id WHERE messageuser.userid ={$id}";  
     $res = mysqli_query($link, $sql);
     if(mysqli_num_rows($res)>0){
         while($row = mysqli_fetch_array($res)){
+            echo $id;
+            echo "- ";
             echo $row['messagetemp'] ;
             echo "<br>"; 
         }

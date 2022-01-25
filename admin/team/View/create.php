@@ -26,7 +26,7 @@
                         <div class="page-header">
                             <h2>Create Record</h2>
                         </div>
-                        <p>Please fill this form and submit to add admin to system</p>
+                        <p>Please fill this form and submit to add Volunteer record to the database.</p>
                         <form action="../Controller/CreateController.php" method="post">
                             <div class="form-group <?php echo (!empty($name_err)) ? 'has-error' : ''; ?>">
                                 <label>Name</label>

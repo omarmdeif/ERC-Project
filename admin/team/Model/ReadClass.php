@@ -27,7 +27,7 @@ class ReadClass {
     }
 
     public function readOneRecord($id) {
-        $sql = "SELECT * FROM admin WHERE id = ?";
+        $sql = "SELECT * FROM volunteer WHERE id = ?";
 
         if ($stmt = mysqli_prepare($this->link, $sql)) {
             mysqli_stmt_bind_param($stmt, "i", $param_id);

@@ -16,9 +16,8 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
         echo "<td>" . $row['id'] . "</td>";
-        echo "<td>" . $row['name'] . "</td>";
-        echo "<td>" . $row['pwd'] . "</td>";
         echo "<td>" . $row['accesslevel'] . "</td>";
+        echo "<td>" . $row['name'] . "</td>";
        
    
         echo "<a href='View/read.php?id=" . $row['id'] . "' title='View Record' data-toggle='tooltip'>

@@ -1,8 +1,9 @@
 <?php
-    $server = "localhost";
+   
+   $server = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "ercok";
+    $dbname = "oop";
 
         $link = mysqli_connect($server, $username, $password, $dbname);
         if ($link){

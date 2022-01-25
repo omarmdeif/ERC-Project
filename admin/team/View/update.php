@@ -36,16 +36,35 @@ include_once '../Controller/updateController.php';
                                 <span class="help-block"><?php echo $name_err; ?></span>
                             </div>
                             <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                                <label>pwd</label>
+                                <label>Email</label>
                                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
                                 <span class="help-block"><?php echo $email_err; ?></span>
                             </div>
                             <div class="form-group <?php echo (!empty($phonenumber_err)) ? 'has-error' : ''; ?>">
-                                <label>Access level</label>
+                                <label>Phone Number</label>
                                 <input type="text" name="phonenumber" class="form-control" value="<?php echo $phonenumber; ?>">
                                 <span class="help-block"><?php echo $phonenumber_err; ?></span>
                             </div>
-                       
+                            <div class="form-group <?php echo (!empty($hours_err)) ? 'has-error' : ''; ?>">
+                                <label>Hours</label>
+                                <input type="text" name="hours" class="form-control" value="<?php echo $hours; ?>">
+                                <span class="help-block"><?php echo $hours_err; ?></span>
+                            </div>
+                            <div class="form-group <?php echo (!empty($address_err)) ? 'has-error' : ''; ?>">
+                                <label>Address</label>
+                                <textarea name="address" class="form-control"><?php echo $address; ?></textarea>
+                                <span class="help-block"><?php echo $address_err; ?></span>
+                            </div>
+                            <div class="form-group <?php echo (!empty($compensation_err)) ? 'has-error' : ''; ?>">
+                                <label>Compensation</label>
+                                <input type="text" name="compensation" class="form-control" value="<?php echo $compensation; ?>">
+                                <span class="help-block"><?php echo $compensation_err; ?></span>
+                            </div>
+                            <div class="form-group <?php echo (!empty($missionid_err)) ? 'has-error' : ''; ?>">
+                                <label>missionid</label>
+                                <input type="text" name="missionid" class="form-control" value="<?php echo $missionid; ?>">
+                                <span class="help-block"><?php echo $missionid_err; ?></span>
+                            </div>
                             <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                             <input type="submit" class="btn btn-primary" value="Submit">
                             <a href="../index.php" class="btn btn-default">Cancel</a>
