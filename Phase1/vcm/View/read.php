@@ -58,6 +58,14 @@ include_once '../Controller/readController.php';
                                 <label>missionid</label>
                                 <p class="form-control-static"><?php echo $row["missionid"]; ?></p>
                             </div>
+                            <div class="form-group">
+                                <label>messages</label>
+                                <p class="form-control-static"><?php 
+                                                                include_once 'mess.php';
+                                                                $gt = new getMess($row["id"]);
+                                                                $gt->fetchMess();
+                                                                ?></p>
+                            </div>
                             <p><a href="../index.php" class="btn btn-primary">Back</a></p>
                         </form>
                     </div>

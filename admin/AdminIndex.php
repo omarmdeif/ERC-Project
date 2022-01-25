@@ -32,7 +32,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="../report/index.php">
             <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Report</span>
           </a>
@@ -44,33 +44,33 @@
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="links_name">Total order</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-user' ></i>
-            <span class="links_name">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
+          <a href="../add message/index.php">
             <i class='bx bx-message' ></i>
-            <span class="links_name">Messages</span>
+            <span class="links_name">Add Message</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="../sendmessage/index.php">
+            <i class='bx bx-message' ></i>
+            <span class="links_name">Send Message</span>
+          </a>
+        </li>
+        <li>
+          <a href="../Phase1/Login/register.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Register Admins</span>
+          </a>
+        </li>
+        <li>
+          <a href="../imgproxy/index.php">
+            <i class='bx bx-image' ></i>
+            <span class="links_name">Retreive Image</span>
+          </a>
+        </li>
+        <li>
+          <a href="../don/index.php">
             <i class='bx bx-heart' ></i>
-            <span class="links_name">Favrorites</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-cog' ></i>
-            <span class="links_name">Setting</span>
+            <span class="links_name">Donate</span>
           </a>
         </li>
         <li class="log_out">
