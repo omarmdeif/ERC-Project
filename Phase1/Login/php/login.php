@@ -7,7 +7,7 @@ if ($_POST) {
         include_once 'databaseConfig.php';
         global $link;
         $conn = $link;
-        $sql = "select * from admins where username='" . $username . "' and password='" . $password. "'";
+        $sql = "select * from admins where username='" . $username . "' and password='" . sha1($password). "'";
         $res = $conn->query($sql);
         if ($res->num_rows > 0) {
             echo'<script>alert("user found")</script>';
