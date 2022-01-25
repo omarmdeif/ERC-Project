@@ -15,7 +15,7 @@ and open the template in the editor.
         include_once 'Database.php';
          $db = new Database();
         $link = $db->connectToDB();
-$sql  = "SELECT messages.messagetemp FROM messageuser LEFT JOIN messages ON messageuser.messageid = messages.id WHERE messageuser.userid =1";  
+    $sql  = "SELECT messages.messagetemp FROM messageuser LEFT JOIN messages ON messageuser.messageid = messages.id WHERE messageuser.userid =1";  
     $res = mysqli_query($link, $sql);
     if(mysqli_num_rows($res)>0){
         while($row = mysqli_fetch_array($res)){

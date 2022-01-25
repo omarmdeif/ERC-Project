@@ -5,7 +5,6 @@ include_once 'addmessagemodel.php';
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-echo 'Thank for addmessage2 <br>';
 
 $d= new addmessagemodel();
 echo $_POST["m"];
