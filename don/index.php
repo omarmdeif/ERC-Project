@@ -39,7 +39,6 @@ and open the template in the editor.
     </form>
 
     <?php
-        echo 'hi';
         // put your code here
         ?>
 </body>

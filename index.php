@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
 -->
 <html>
     <head>
@@ -10,17 +9,57 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-           <form action="upload.php" method="post" enctype="multipart/form-data">
-    <label>Select Image File:</label>
-    <input type="file" name="image">
-    <input type="submit" name="submit" value="Upload">
-    
-</form>
-        <form method="get" action="view.php">
-    <button type="submit">show</button>
-</form>        
-    <?php
-        // put your code here
+        <?php
+       
+       
+        interface donate
+        {
+             public function donatecash();
+        }
+        class guest
+        {
+                
+        }
+        class donateadapter implements donate
+        {
+             
+            
+            public function __construct()
+            {
+                 $temp = new guest();
+            }
+
+            public function donatecash() {
+                
+                $temp2 = new guest();
+            }
+
+        }
+        class donors implements donate
+        {
+            public function donatecash() {
+             print("cash stock increase");   
+            }
+
+        }
+         class mainn
+        {
+            public $res;
+            public $rev;
+            public function __construct(donor $ref)
+            {
+                $this->ref = ref;
+                $ref = new donors();
+                $ref->donatecash();
+            }
+            public static function main(donate $res)
+            {
+                $res->donatecash();
+            }
+        }
+         $debugg = new donateadapter();
+        $debug->donatecash();
+        
         ?>
     </body>
 </html>

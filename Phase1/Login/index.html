@@ -1,6 +1,6 @@
 <html>
 <head>
-        <title>Login Or Register</title>
+        <title>Login</title>
         <link rel="stylesheet" type="text/css" href="home.css">
     </head>
     <body>
@@ -17,19 +17,7 @@
                     <button type="submit" name="login" value="Login"> Login </button>
                 </form>
             </div>
-            <div class="col-md-3">
-                <h1 id="formHeader" > Register form  </h1>
-                <hr>
-                <form  method="post" action="PHP/register.php" onsubmit="return validate_form ();">
-                    <label >Username</label>
-                    <input type="text" name="registerUsername" id="registerUsername" required>
-                    <label >Password</label>
-                    <input type="password" name="registerPassword" id="registerPassword" required>
-                    <label >Confirm Password</label>
-                    <input type="password" name="registerConfirmPassword" id="registerConfrimPassword" required>
-                    <button type="submit" name="register" value="Register"> Register </button>
-                </form>
-            </div>
+            
         </div>
         <script src="validtor.js"></script>
     </body>
