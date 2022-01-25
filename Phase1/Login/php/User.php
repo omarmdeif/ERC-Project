@@ -31,7 +31,7 @@ class User {
     function register($user) {
         $this->connectToDatabase();
         $sql = "INSERT INTO admins (username, password)"
-                . " VALUES ('" . $user->getUsername() . "' , '" . $user->getPassword()  . "')";
+                . " VALUES ('" . $user->getUsername() . "' , '" . sha1($user->getPassword())  . "')";
         return $this->database->query($sql);
     }
 

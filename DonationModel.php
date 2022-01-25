@@ -84,14 +84,5 @@ class DonationModel {
         $value=$sCN;//after hash
         $userid=$d->userid1; //we set the user id letter
         mysqli_stmt_execute($stmt5);
-    }
-    
-    
-    
-    
-    
-    
-    
-    
+    }   
 }
-

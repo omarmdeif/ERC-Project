@@ -48,7 +48,7 @@ include_once '../Controller/readController.php';
                                 define('DB_SERVER', 'localhost');
                                 define('DB_USERNAME', 'root');
                                 define('DB_PASSWORD', '');
-                                define('DB_NAME', 'erc');
+                                define('DB_NAME', 'oop');
                                  
                                 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
                                     $sql = "SELECT id, name from volunteers where missionid = " .$row["id"]. "";

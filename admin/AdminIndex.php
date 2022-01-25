@@ -27,7 +27,7 @@
         </li>
         <li>
             <a href="../Phase1/vcm/index.php">
-            <i class='bx bx-list-ul' ></i>
+            <i class='bx bx-user' ></i>
             <span class="links_name">Manage volunteers</span>
           </a>
         </li>
