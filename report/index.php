@@ -1,6 +1,3 @@
- <?php
-        include_once("config.php");
- ?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -40,6 +37,7 @@
       
       
       <?php
+      include_once("config.php");
       $sql="SELECT * FROM customizedreport WHERE id=1";
       $res=mysqli_query($link, $sql);
       if(mysqli_num_rows($res)>0)
@@ -47,11 +45,8 @@
           $i=1; 
           while($row=mysqli_fetch_array($res))
           {
-
-
                   $sql2=  $row['SQL'];
                 //   echo($sql2);
-
           }
           
       } else {
@@ -73,9 +68,6 @@
                   <td><?php echo $row['id']?></td>
                   <td><?php echo $row['bloodtype']?></td>
                   <td><?php echo $row['stock']?></td>
-                  
-                  <td></td>
-                  <td></td>
                </tr>
               <?php
           }
